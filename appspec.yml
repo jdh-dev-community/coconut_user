@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /home/ec2-user/user_service
 hooks:
-  ApplicationStop:
+  AfterInstall:
     - location: deploy_scripts/cleanup_script.sh
       timeout: 300
       runas: ec2-user
