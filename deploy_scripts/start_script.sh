@@ -13,3 +13,5 @@ echo "ECR Login success" >> /home/ec2-user/deploy.log
 IMAGE="$USER_ID.dkr.ecr.$REGION.amazonaws.com/$REPO"
 docker pull "$IMAGE"
 docker run -d -p 80:"$PORT" --name "$REPO" "$IMAGE"
+
+echo "@@@@@ Start up finished @@@@@" >> /home/ec2-user/deploy.log
