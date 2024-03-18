@@ -22,3 +22,5 @@ if docker images | grep -q "$REPO"; then
 else
     echo "Image $IMAGE does not exist." >> /home/ec2-user/deploy.log
 fi
+
+echo "@@@@@ Clean up end @@@@@" >> /home/ec2-user/deploy.log
